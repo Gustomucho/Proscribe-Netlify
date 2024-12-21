@@ -1,0 +1,102 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TranscriptionForm from '../components/TranscriptionForm';
+---
+
+<Layout title="Proscribe - Audio Transcription Service">
+  <main>
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-b from-white to-gray-50 py-20">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row items-center gap-8">
+          <!-- Left side content -->
+          <div class="lg:w-1/2 space-y-6">
+            <h1 class="text-5xl font-bold leading-tight text-gray-900">
+              Transform Your Audio into Text with AI
+            </h1>
+            <p class="text-xl text-gray-600">
+              Fast, accurate, and affordable audio transcription powered by cutting-edge AI technology.
+            </p>
+            <div class="flex gap-4">
+              <a href="#transcribe" class="bg-primary text-white px-6 py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors">
+                Start Transcribing
+              </a>
+              <a href="#features" class="border border-gray-300 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors">
+                Learn More
+              </a>
+            </div>
+          </div>
+          
+          <!-- Right side image -->
+          <div class="lg:w-1/2">
+            <img 
+              src="/soundwave.png" 
+              alt="Audio Waveform" 
+              class="w-full h-auto"
+              width="600"
+              height="400"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Why Choose Proscribe?</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="p-6 border rounded-lg hover:shadow-lg transition-shadow">
+            <div class="text-primary text-2xl mb-4">⚡️</div>
+            <h3 class="text-xl font-semibold mb-2">Lightning Fast</h3>
+            <p class="text-gray-600">Get your transcriptions in minutes, not hours. Our AI processes audio in real-time.</p>
+          </div>
+          <div class="p-6 border rounded-lg hover:shadow-lg transition-shadow">
+            <div class="text-primary text-2xl mb-4">🎯</div>
+            <h3 class="text-xl font-semibold mb-2">Highly Accurate</h3>
+            <p class="text-gray-600">Advanced AI ensures precise transcriptions with punctuation and speaker diarization.</p>
+          </div>
+          <div class="p-6 border rounded-lg hover:shadow-lg transition-shadow">
+            <div class="text-primary text-2xl mb-4">💰</div>
+            <h3 class="text-xl font-semibold mb-2">Cost-Effective</h3>
+            <p class="text-gray-600">Pay only for what you use. No subscriptions or hidden fees.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Transcription Form Section -->
+    <section id="transcribe" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4 max-w-3xl">
+        <h2 class="text-3xl font-bold text-center mb-8">Start Your Transcription</h2>
+        <div class="bg-white p-8 rounded-lg shadow-sm">
+          <TranscriptionForm client:load />
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">How It Works</h2>
+        <div class="grid md:grid-cols-3 gap-8 text-center">
+          <div class="space-y-4">
+            <div class="text-4xl font-bold text-primary">1</div>
+            <h3 class="text-xl font-semibold">Upload Your Audio</h3>
+            <p class="text-gray-600">Upload your audio file in MP3, WAV, M4A, or FLAC format.</p>
+          </div>
+          <div class="space-y-4">
+            <div class="text-4xl font-bold text-primary">2</div>
+            <h3 class="text-xl font-semibold">Enter Your Email</h3>
+            <p class="text-gray-600">Provide your email address to receive the transcription.</p>
+          </div>
+          <div class="space-y-4">
+            <div class="text-4xl font-bold text-primary">3</div>
+            <h3 class="text-xl font-semibold">Get Your Transcription</h3>
+            <p class="text-gray-600">Receive your transcription in both TXT and SRT formats.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
